@@ -14,6 +14,9 @@ class CommitersController < ApplicationController
   def set_commietrs
     commiters = Commiters.new
     @commits = commiters.users
+    if @commits.code == 500
+      render json: {errors: "Falha na coneccão"}, status: 500
+    end
   end
 
 end

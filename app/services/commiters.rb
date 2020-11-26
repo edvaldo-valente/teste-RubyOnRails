@@ -11,7 +11,7 @@ class Commiters
     end
 
     def users
-        self.class.get("/search/users?q=followers%3A%3E%3D1000&ref=searchresults&s=followers&type=Users", @options )
+        response = self.class.get("/search/users?q=followers%3A%3E%3D1000&ref=searchresults&s=followers&type=Users", @options )
     end
 
 end
