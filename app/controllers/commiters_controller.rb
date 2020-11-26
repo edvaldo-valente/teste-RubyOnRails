@@ -8,11 +8,12 @@ class CommitersController < ApplicationController
       render json: {errors: @enemy.errors}, status: :not_found
     end
   end
-  
+
   private
   
   def set_commietrs
     commiters = Commiters.new
-    @commits = commiters.user
+    @commits = commiters.users
   end
+
 end
